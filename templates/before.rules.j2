@@ -9,7 +9,6 @@
 #
 
 # Don't delete these required lines, otherwise there will be errors
-# BEGIN ANSIBLE MANAGED BLOCK
 # OpenVPN config
 *nat
 :POSTROUTING ACCEPT [0:0]
@@ -17,7 +16,6 @@
 -A POSTROUTING -s {{openvpn_server_network}}/24 -j SNAT --to-source {{ansible_default_ipv4.address}}
 -A POSTROUTING -s {{openvpn_admin_network}}/24 -j SNAT --to-source {{ansible_default_ipv4.address}}
 COMMIT
-# END ANSIBLE MANAGED BLOCK
 *filter
 :ufw-before-input - [0:0]
 :ufw-before-output - [0:0]
