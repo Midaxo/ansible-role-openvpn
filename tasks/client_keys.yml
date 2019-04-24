@@ -74,6 +74,7 @@
     owner: root
     group: root
     mode: 0400
+  no_log: yes
   with_together:
     - "{{client_certs.results}}"
     - "{{client_keys.results}}"
