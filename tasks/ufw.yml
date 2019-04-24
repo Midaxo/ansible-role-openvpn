@@ -8,6 +8,7 @@
   ufw:
     state: enabled
     policy: allow
+    direction: outgoing
 
 - name: ufw - enable forwarding
   lineinfile:
